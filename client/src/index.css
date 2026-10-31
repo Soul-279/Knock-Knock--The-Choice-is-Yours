@@ -99,6 +99,12 @@ a:focus-visible {
   transition:
     background 0.4s ease,
     color 0.4s ease;
+
+  /* Twilight illustration colours */
+
+  --doodle-primary: #9CC5D8;
+  --doodle-secondary: #D5A0A7;
+  --doodle-warm: #D9BE91;
 }
 
 
@@ -138,5 +144,35 @@ a:focus-visible {
       #E9E4EE 48%,
       #F2DFD8 100%);
 
+  /* Dawn illustration colours */
+
+  --doodle-primary: #6F8FA8;
+  --doodle-secondary: #C77D77;
+  --doodle-warm: #C49A62;
+
   color: var(--text);
+}
+
+/* =================================
+   THEME-AWARE DOODLE COLOURS
+================================= */
+
+.doodle-primary {
+  stroke: var(--doodle-primary);
+}
+
+.doodle-secondary {
+  stroke: var(--doodle-secondary);
+}
+
+.doodle-warm {
+  stroke: var(--doodle-warm);
+}
+
+.doodle-secondary-fill {
+  fill: var(--doodle-secondary);
+}
+
+.doodle-warm-fill {
+  fill: var(--doodle-warm);
 }

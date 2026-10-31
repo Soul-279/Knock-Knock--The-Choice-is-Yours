@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import PollCard from "./components/PollCard";
+import HeroDecorations from "./components/decorations/HeroDecorations";
+import SectionDecorations from "./components/decorations/SectionDecorations";
 
 const demoPolls = [
   {
@@ -50,46 +52,48 @@ function App() {
 
       <header className="site-header">
 
-  <a href="#" className="brand">
-    <span className="brand-mark">K.</span>
+        <a href="#" className="brand">
+          <span className="brand-mark">K.</span>
 
-    <span className="brand-name">
-      KNOCK KNOCK
-      <small>THE CHOICE IS YOURS</small>
-    </span>
-  </a>
+          <span className="brand-name">
+            KNOCK KNOCK
+            <small>THE CHOICE IS YOURS</small>
+          </span>
+        </a>
 
-  <nav className="navigation">
-    <a href="#discover">Discover</a>
-    <a href="#about">About</a>
-  </nav>
+        <nav className="navigation">
+          <a href="#discover">Discover</a>
+          <a href="#about">About</a>
+        </nav>
 
-  <button
-    className="theme-toggle"
-    type="button"
-    onClick={toggleTheme}
-    aria-label={`Switch to ${theme === "twilight" ? "dawn" : "twilight"} theme`}
-    aria-pressed={theme === "dawn"}
-  >
-    <span aria-hidden="true">
-      {theme === "twilight" ? "☼" : "☾"}
-    </span>
+        <button
+          className="theme-toggle"
+          type="button"
+          onClick={toggleTheme}
+          aria-label={`Switch to ${theme === "twilight" ? "dawn" : "twilight"} theme`}
+          aria-pressed={theme === "dawn"}
+        >
+          <span aria-hidden="true">
+            {theme === "twilight" ? "☼" : "☾"}
+          </span>
 
-    <span>
-      {theme === "twilight" ? "Dawn" : "Twilight"}
-    </span>
-  </button>
+          <span>
+            {theme === "twilight" ? "Dawn" : "Twilight"}
+          </span>
+        </button>
 
-  <a href="#create" className="header-button">
-    Create a dilemma ↗
-  </a>
+        <a href="#create" className="header-button">
+          Create a dilemma ↗
+        </a>
 
-</header>
+      </header>
 
 
       <main>
 
         <section className="hero">
+
+          <HeroDecorations />
 
           <div className="hero-content">
 
@@ -155,6 +159,8 @@ function App() {
 
 
         <section className="discover-section" id="discover">
+
+          <SectionDecorations />
 
           <div className="section-heading">
 

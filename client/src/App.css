@@ -346,67 +346,6 @@
 }
 
 /* =================================
-   DOODLE DETAILS
-================================= */
-
-.doodle-note {
-  color: var(--rose);
-
-  font-family: "Delius", cursive;
-
-  font-size: 16px;
-
-  transform: rotate(-7deg);
-}
-
-.hero-content::after {
-  content: "what if...";
-
-  position: absolute;
-
-  right: 8%;
-  top: -32px;
-
-  color: var(--rose);
-
-  font-family: "Delius", cursive;
-  font-size: 18px;
-
-  transform: rotate(-8deg);
-}
-
-.hero-decoration::after {
-  content: "✦";
-
-  position: absolute;
-
-  top: -19px;
-  right: 30px;
-
-  color: var(--cyan);
-
-  font-size: 35px;
-
-  animation: twinkle 3s ease-in-out infinite;
-}
-
-.hero-decoration::before {
-  content: "01 / 02";
-
-  position: absolute;
-
-  bottom: -19px;
-  right: 25px;
-
-  color: var(--accent);
-
-  font-family: "Delius", cursive;
-  font-size: 14px;
-
-  transform: rotate(5deg);
-}
-
-/* =================================
    DISCOVER SECTION
 ================================= */
 
@@ -674,4 +613,168 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+/* =================================
+   DECORATIVE LAYERS
+================================= */
+
+.hero,
+.discover-section {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Decorative elements sit behind content */
+
+.hero-doodle-layer,
+.section-doodle-layer {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* Keep actual content above the artwork */
+
+.hero-content,
+.hero-decoration,
+.section-heading,
+.poll-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.doodle {
+  display: block;
+
+  overflow: visible;
+
+  pointer-events: none;
+
+  filter: drop-shadow(
+    0 5px 12px var(--glow)
+  );
+}
+
+
+/* =================================
+   HERO DECORATION ZONES
+================================= */
+
+/* Moon: upper empty space between the
+   heading and the two-door illustration */
+
+.hero-moon {
+  position: absolute;
+
+  width: 64px;
+  height: 64px;
+
+  top: 3%;
+  left: 52%;
+
+  transform: rotate(-12deg);
+
+  animation: doodle-float 7s ease-in-out infinite;
+}
+
+/* Handwritten annotation */
+
+.hero-note {
+  position: absolute;
+
+  top: 17%;
+  left: 53%;
+
+  color: var(--rose);
+
+  font-family: "Delius", cursive;
+  font-size: 15px;
+
+  transform: rotate(-8deg);
+}
+
+/* Planet: lower-left whitespace beneath
+   the hero buttons */
+
+.hero-orbit {
+  position: absolute;
+
+  width: 76px;
+  height: 76px;
+
+  left: 4%;
+  bottom: 1%;
+
+  animation: doodle-float 9s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+
+/* =================================
+   DISCOVERY SECTION
+================================= */
+
+.section-sparkle {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  top: 22px;
+  right: 8%;
+
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes doodle-float {
+
+  0%, 100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -9px;
+  }
+
+}
+
+
+/* =================================
+   MOBILE POSITIONING
+================================= */
+
+@media (max-width: 760px) {
+
+  .hero-moon {
+    width: 46px;
+    height: 46px;
+
+    top: 8px;
+    left: auto;
+    right: 18px;
+  }
+
+  /* Avoid crowding the mobile hero */
+
+  .hero-note,
+  .hero-orbit {
+    display: none;
+  }
+
+  .section-sparkle {
+    width: 24px;
+    height: 24px;
+
+    top: 20px;
+    right: 8%;
+  }
+
 }
