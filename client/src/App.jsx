@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import PollCard from "./components/PollCard";
 
@@ -37,30 +38,53 @@ const demoPolls = [
 ];
 
 function App() {
+  const [theme, setTheme] = useState("twilight");
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) =>
+      currentTheme === "twilight" ? "dawn" : "twilight"
+    );
+  };
   return (
-    <div className="app-shell">
+    <div className="app-shell" data-theme={theme}>
 
       <header className="site-header">
 
-        <a href="#" className="brand">
-          <span className="brand-mark">K.</span>
+  <a href="#" className="brand">
+    <span className="brand-mark">K.</span>
 
-          <span className="brand-name">
-            KNOCK KNOCK
-            <small>THE CHOICE IS YOURS</small>
-          </span>
-        </a>
+    <span className="brand-name">
+      KNOCK KNOCK
+      <small>THE CHOICE IS YOURS</small>
+    </span>
+  </a>
 
-        <nav className="navigation">
-          <a href="#discover">Discover</a>
-          <a href="#about">About</a>
-        </nav>
+  <nav className="navigation">
+    <a href="#discover">Discover</a>
+    <a href="#about">About</a>
+  </nav>
 
-        <a href="#create" className="header-button">
-          Create a dilemma ↗
-        </a>
+  <button
+    className="theme-toggle"
+    type="button"
+    onClick={toggleTheme}
+    aria-label={`Switch to ${theme === "twilight" ? "dawn" : "twilight"} theme`}
+    aria-pressed={theme === "dawn"}
+  >
+    <span aria-hidden="true">
+      {theme === "twilight" ? "☼" : "☾"}
+    </span>
 
-      </header>
+    <span>
+      {theme === "twilight" ? "Dawn" : "Twilight"}
+    </span>
+  </button>
+
+  <a href="#create" className="header-button">
+    Create a dilemma ↗
+  </a>
+
+</header>
 
 
       <main>

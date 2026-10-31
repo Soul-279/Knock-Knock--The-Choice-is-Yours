@@ -1,10 +1,21 @@
+/* =================================
+   KNOCK KNOCK — GLOBAL DESIGN
+================================= */
+
 :root {
-  font-family: Inter, "Segoe UI", sans-serif;
-  color: #f2f0ed;
-  background: #101014;
+  font-family: "Nunito", sans-serif;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
+  font-smooth: always;
+
+  font-weight: 500;
 }
+
+/* =================================
+   GLOBAL RESET
+================================= */
 
 * {
   box-sizing: border-box;
@@ -25,11 +36,107 @@ a {
   font: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* =================================
+   TWILIGHT — MIDNIGHT OBSERVATORY
+================================= */
+
+.app-shell {
+  --background: #080D1B;
+  --surface: #111A30;
+  --surface-raised: #192440;
+  --surface-hover: #222E4C;
+
+  --text: #E9ECF6;
+  --text-muted: #A1AAC2;
+
+  --accent: #94B8D0;
+  --accent-strong: #729BB8;
+
+  --rose: #D5A0A7;
+  --cyan: #8DC8D3;
+  --gold: #D9BE91;
+
+  --border: rgba(192, 200, 230, 0.14);
+  --shadow: rgba(2, 4, 13, 0.48);
+  --glow: rgba(104, 147, 180, 0.18);
+
+  --page-atmosphere:
+    radial-gradient(ellipse at 15% 12%,
+      rgba(42, 73, 124, 0.50),
+      transparent 52%),
+    radial-gradient(ellipse at 85% 28%,
+      rgba(67, 47, 100, 0.28),
+      transparent 48%),
+    linear-gradient(135deg,
+      #080D1B 0%,
+      #0B1428 48%,
+      #141328 100%);
+
+  background: var(--page-atmosphere);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text);
+
+  min-height: 100vh;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+
+/* =================================
+   DAWN — FIRST LIGHT
+================================= */
+
+.app-shell[data-theme="dawn"] {
+  --background: #F1E9E7;
+  --surface: #FBF4EF;
+  --surface-raised: #FFF9F4;
+  --surface-hover: #E9E4F0;
+
+  --text: #383348;
+  --text-muted: #777387;
+
+  --accent: #6F8FA8;
+  --accent-strong: #58788F;
+
+  --rose: #C77D77;
+  --cyan: #719DAD;
+  --gold: #C49A62;
+
+  --border: rgba(65, 55, 83, 0.15);
+  --shadow: rgba(77, 57, 74, 0.12);
+  --glow: rgba(199, 125, 119, 0.20);
+
+  --page-atmosphere:
+    radial-gradient(ellipse at 12% 12%,
+      rgba(159, 190, 214, 0.55),
+      transparent 48%),
+    radial-gradient(ellipse at 88% 15%,
+      rgba(235, 160, 143, 0.50),
+      transparent 50%),
+    linear-gradient(130deg,
+      #F2E9E8 0%,
+      #E9E4EE 48%,
+      #F2DFD8 100%);
+
+  color: var(--text);
 }
