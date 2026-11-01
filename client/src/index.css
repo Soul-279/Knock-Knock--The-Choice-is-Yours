@@ -112,6 +112,21 @@ a:focus-visible {
   --doodle-cloud-fill: #111A30;
   --doodle-ufo-fill: #263752;
   --doodle-beam-fill: rgba(140, 203, 216, 0.12);
+
+  /* Character illustration palette */
+
+  --star-fill: #344056;
+
+  --astronaut-suit-fill: #DCE7EB;
+  --astronaut-helmet-fill: #263C53;
+  --astronaut-visor-fill: #47647B;
+
+  --koi-body-fill: #DCE8E9;
+  --koi-fin-fill: #78A9A5;
+  --koi-marking-fill: #C98C82;
+  --koi-eye-fill: #A5D9D8;
+
+  --koi-detail-color: #BEDBD4;
 }
 
 
@@ -164,6 +179,19 @@ a:focus-visible {
   --doodle-ufo-fill: #E9DFE6;
   --doodle-beam-fill: rgba(113, 157, 173, 0.15);
 
+  /* Character illustration palette */
+
+  --star-fill: #F2DDB2;
+
+  --astronaut-suit-fill: #F5E8DD;
+  --astronaut-helmet-fill: #C7D9D9;
+  --astronaut-visor-fill: #A9CED0;
+
+  --koi-body-fill: #FFF0D0;
+  --koi-fin-fill: #A4CBB5;
+  --koi-marking-fill: #D58E6B;
+  --koi-eye-fill: #518E91;
+
   color: var(--text);
 }
 
@@ -190,10 +218,6 @@ a:focus-visible {
 .doodle-warm-fill {
   fill: var(--doodle-warm);
 }
-
-/* =================================
-   DOODLE SCENE FILL VARIABLES
-================================= */
 
 /* =================================
    FULL MOON — SURFACE DETAILS
@@ -233,4 +257,108 @@ a:focus-visible {
 .ufo-beam {
   fill: var(--doodle-beam-fill);
   stroke: var(--doodle-cyan);
+}
+
+/* =================================
+   CHARACTER ILLUSTRATION STYLES
+================================= */
+
+.sleepy-star-body {
+  fill: var(--star-fill);
+  stroke: var(--doodle-warm);
+}
+
+/* Sleepy Star's nightcap */
+
+.star-hat-body {
+  fill: var(--doodle-secondary);
+  stroke: var(--doodle-primary);
+}
+
+.star-hat-band {
+  fill: none;
+  stroke: var(--doodle-warm);
+}
+
+.astronaut-suit {
+  fill: var(--astronaut-suit-fill);
+  stroke: var(--doodle-primary);
+}
+
+.astronaut-helmet {
+  fill: var(--astronaut-helmet-fill);
+  stroke: var(--doodle-primary);
+}
+
+.astronaut-visor {
+  fill: var(--astronaut-visor-fill);
+  stroke: var(--doodle-secondary);
+}
+
+/* Astronaut helmet detailing */
+
+.astronaut-rim {
+  fill: var(--astronaut-suit-fill);
+  stroke: var(--doodle-primary);
+}
+
+.astronaut-rim-detail {
+  fill: none;
+  stroke: var(--doodle-secondary);
+}
+
+.astronaut-glint {
+  fill: none;
+  stroke: var(--doodle-warm);
+}
+
+.koi-body {
+  fill: var(--koi-body-fill);
+  stroke: var(--doodle-primary);
+}
+
+.koi-fin {
+  fill: var(--koi-fin-fill);
+  stroke: var(--doodle-primary);
+  fill-opacity: 0.83;
+}
+
+.koi-fin-detail {
+  fill: none;
+  stroke: var(--koi-detail-color);
+}
+
+.koi-marking {
+  fill: var(--koi-marking-fill);
+  stroke: none;
+}
+
+.koi-marking-stroke {
+  fill: none;
+  stroke: var(--koi-marking-fill);
+}
+
+.koi-swirl {
+  fill: none;
+  stroke: var(--koi-marking-fill);
+}
+
+.koi-eye {
+  fill: var(--koi-eye-fill);
+}
+
+.koi-eye-outline {
+  fill: var(--doodle-primary);
+  stroke: var(--doodle-primary);
+  stroke-width: 1;
+}
+
+.koi-pupil {
+  fill: var(--text);
+}
+
+.koi-scale {
+  fill: none;
+  stroke: var(--doodle-secondary);
+  opacity: 0.65;
 }

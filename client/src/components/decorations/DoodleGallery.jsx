@@ -1,5 +1,8 @@
 import MoonFisher from "../doodles/scenes/MoonFisher";
 import CuriousUFO from "../doodles/scenes/CuriousUFO";
+import SleepyStar from "../doodles/characters/SleepyStar";
+import TinyAstronaut from "../doodles/characters/TinyAstronaut";
+import CelestialKoi from "../doodles/characters/CelestialKoi";
 
 function DoodleGallery() {
   return (
@@ -48,6 +51,50 @@ function DoodleGallery() {
 
           <span>
             An unexpected visitor.
+          </span>
+
+        </article>
+
+        <article className="doodle-gallery-card">
+
+          <div className="doodle-gallery-art">
+            <SleepyStar />
+          </div>
+
+          <h3>Just five more minutes...</h3>
+
+          <span>
+            Our little dreamer.
+          </span>
+
+        </article>
+
+
+        <article className="doodle-gallery-card">
+
+          <div className="doodle-gallery-art">
+            <TinyAstronaut />
+          </div>
+
+          <h3>Lost in orbit</h3>
+
+          <span>
+            An explorer without directions.
+          </span>
+
+        </article>
+
+
+        <article className="doodle-gallery-card">
+
+          <div className="doodle-gallery-art">
+            <CelestialKoi />
+          </div>
+
+          <h3>The wandering spirit</h3>
+
+          <span>
+            A little koi swimming between worlds.
           </span>
 
         </article>
