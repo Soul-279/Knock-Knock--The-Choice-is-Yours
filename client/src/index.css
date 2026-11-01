@@ -105,6 +105,13 @@ a:focus-visible {
   --doodle-primary: #9CC5D8;
   --doodle-secondary: #D5A0A7;
   --doodle-warm: #D9BE91;
+
+  --doodle-moon-fill: #26364B;
+  --doodle-crater-fill: rgba(8, 13, 27, 0.30);
+  --doodle-maria-fill: rgba(140, 203, 216, 0.09);
+  --doodle-cloud-fill: #111A30;
+  --doodle-ufo-fill: #263752;
+  --doodle-beam-fill: rgba(140, 203, 216, 0.12);
 }
 
 
@@ -150,6 +157,13 @@ a:focus-visible {
   --doodle-secondary: #C77D77;
   --doodle-warm: #C49A62;
 
+  --doodle-moon-fill: #E9DED7;
+  --doodle-crater-fill: rgba(111, 143, 168, 0.12);
+  --doodle-maria-fill: rgba(199, 125, 119, 0.12);
+  --doodle-cloud-fill: #FBF4EF;
+  --doodle-ufo-fill: #E9DFE6;
+  --doodle-beam-fill: rgba(113, 157, 173, 0.15);
+
   color: var(--text);
 }
 
@@ -175,4 +189,48 @@ a:focus-visible {
 
 .doodle-warm-fill {
   fill: var(--doodle-warm);
+}
+
+/* =================================
+   DOODLE SCENE FILL VARIABLES
+================================= */
+
+/* =================================
+   FULL MOON — SURFACE DETAILS
+================================= */
+
+.moon-fisher-body {
+  fill: var(--doodle-moon-fill);
+  stroke: var(--doodle-primary);
+}
+
+.moon-fisher-cloud {
+  fill: var(--doodle-cloud-fill);
+  stroke: var(--doodle-secondary);
+}
+
+.moon-maria {
+  fill: var(--doodle-maria-fill);
+  stroke: none;
+}
+
+.moon-crater {
+  fill: var(--doodle-crater-fill);
+  stroke: var(--doodle-secondary);
+}
+
+.moon-crater-highlight {
+  fill: none;
+  stroke: var(--doodle-primary);
+  opacity: 0.75;
+}
+
+.ufo-glass {
+  fill: var(--doodle-ufo-fill);
+  stroke: var(--doodle-primary);
+}
+
+.ufo-beam {
+  fill: var(--doodle-beam-fill);
+  stroke: var(--doodle-cyan);
 }

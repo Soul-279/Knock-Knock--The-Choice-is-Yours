@@ -3,6 +3,7 @@ import "./App.css";
 import PollCard from "./components/PollCard";
 import HeroDecorations from "./components/decorations/HeroDecorations";
 import SectionDecorations from "./components/decorations/SectionDecorations";
+import DoodleGallery from "./components/decorations/DoodleGallery";
 
 const demoPolls = [
   {
@@ -215,6 +216,8 @@ function App() {
           </button>
 
         </section>
+
+        <DoodleGallery />
 
       </main>
 

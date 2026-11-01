@@ -778,3 +778,85 @@
   }
 
 }
+
+/* =================================
+   KNOCK KNOCK — DOODLE CABINET
+================================= */
+
+.doodle-gallery {
+  max-width: 1180px;
+  margin: 60px auto 90px;
+  padding: 55px 30px;
+
+  border-top: 1px dashed var(--border);
+}
+
+.doodle-gallery-heading {
+  margin-bottom: 35px;
+}
+
+.doodle-gallery-heading h2 {
+  margin: 12px 0;
+
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+
+.doodle-gallery-heading > p:last-child {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.doodle-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.doodle-gallery-card {
+  padding: 20px;
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  background: var(--surface);
+}
+
+.doodle-gallery-art {
+  min-height: 230px;
+
+  display: grid;
+  place-items: center;
+
+  background:
+    radial-gradient(circle, var(--glow), transparent 70%);
+
+  border-radius: 14px;
+}
+
+.doodle-gallery-art svg {
+  width: 100%;
+  max-width: 270px;
+  max-height: 200px;
+}
+
+.doodle-gallery-card h3 {
+  margin: 20px 0 5px;
+
+  font-size: 18px;
+}
+
+.doodle-gallery-card > span {
+  color: var(--text-muted);
+
+  font-family: "Delius", cursive;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+
+  .doodle-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
