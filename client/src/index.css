@@ -127,6 +127,16 @@ a:focus-visible {
   --koi-eye-fill: #A5D9D8;
 
   --koi-detail-color: #BEDBD4;
+
+  /* Pendulum clock */
+
+  --clock-glass-fill: rgba(140, 203, 216, 0.08);
+
+  /* Three-dimensional dice */
+
+  --die-top-fill: #293F59;
+  --die-left-fill: #14263D;
+  --die-right-fill: #1D3049;
 }
 
 
@@ -191,6 +201,16 @@ a:focus-visible {
   --koi-fin-fill: #A4CBB5;
   --koi-marking-fill: #D58E6B;
   --koi-eye-fill: #518E91;
+
+  /* Pendulum clock */
+
+  --clock-glass-fill: rgba(113, 157, 173, 0.09);
+
+  /* Three-dimensional dice */
+
+  --die-top-fill: #F5E4DA;
+  --die-left-fill: #E3D2CD;
+  --die-right-fill: #EBDCD5;
 
   color: var(--text);
 }
@@ -361,4 +381,162 @@ a:focus-visible {
   fill: none;
   stroke: var(--doodle-secondary);
   opacity: 0.65;
+}
+
+/* =================================
+   CURIOUS OBJECTS — THEME STYLES
+================================= */
+
+.clock-face,
+.cosmic-die-face,
+.mystery-door {
+  fill: var(--surface-raised);
+  stroke: var(--doodle-primary);
+}
+
+.plane-body {
+  fill: var(--surface-raised);
+  stroke: var(--doodle-primary);
+}
+
+.mystery-door-detail {
+  fill: none;
+  stroke: var(--doodle-secondary);
+}
+
+.constellation-star {
+  fill: var(--doodle-warm);
+  stroke: var(--doodle-primary);
+  stroke-width: 1.2;
+}
+
+/* Ensure primary-coloured filled shapes render correctly */
+
+.doodle-primary-fill {
+  fill: var(--doodle-primary);
+}
+
+/* =================================
+   PENDULUM CLOCK
+================================= */
+
+.pendulum-clock-case {
+  fill: var(--surface-raised);
+  stroke: var(--doodle-warm);
+}
+
+.clock-case-trim {
+  fill: var(--surface-hover);
+  stroke: var(--doodle-secondary);
+}
+
+.pendulum-clock-face {
+  fill: var(--surface);
+  stroke: var(--doodle-primary);
+}
+
+.pendulum-clock-rim {
+  fill: none;
+  stroke: var(--doodle-secondary);
+}
+
+.pendulum-clock-glass {
+  fill: var(--clock-glass-fill);
+  stroke: var(--doodle-secondary);
+}
+
+.pendulum-hand {
+  stroke: var(--doodle-primary);
+}
+
+.pendulum-hand-accent {
+  stroke: var(--doodle-warm);
+}
+
+.pendulum-bob {
+  fill: var(--doodle-warm);
+  stroke: var(--doodle-primary);
+}
+
+
+/* =================================
+   THREE-DIMENSIONAL DICE
+================================= */
+
+.die-top {
+  fill: var(--die-top-fill);
+  stroke: var(--doodle-primary);
+}
+
+.die-left {
+  fill: var(--die-left-fill);
+  stroke: var(--doodle-primary);
+}
+
+.die-right {
+  fill: var(--die-right-fill);
+  stroke: var(--doodle-primary);
+}
+
+.die-pip {
+  fill: var(--doodle-warm);
+}
+
+
+/* =================================
+   MYSTERIOUS SOLITAIRE CARDS
+================================= */
+
+.mystery-card {
+  stroke: var(--doodle-primary);
+}
+
+.mystery-card-moon {
+  fill: var(--surface-raised);
+}
+
+.mystery-card-sun {
+  fill: var(--surface-hover);
+}
+
+.mystery-door-shape {
+  fill: var(--surface);
+  stroke: var(--doodle-secondary);
+}
+
+.mystery-card-detail {
+  fill: none;
+  stroke: var(--doodle-secondary);
+}
+
+.mystery-card-label {
+  fill: var(--text-muted);
+  font-family: "Nunito", sans-serif;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+/* =================================
+   STAR COLLECTION
+================================= */
+
+.star-solid {
+  fill: var(--doodle-warm);
+  stroke: var(--doodle-primary);
+}
+
+.star-four-outline {
+  fill: none;
+  stroke: var(--doodle-primary);
+}
+
+.star-outline-path {
+  fill: none;
+  stroke: var(--doodle-secondary);
+}
+
+.twinkle-stroke {
+  fill: none;
+  stroke: var(--doodle-warm);
 }

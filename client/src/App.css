@@ -861,3 +861,83 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* =================================
+   PENDULUM CLOCK ANIMATION
+================================= */
+
+.clock-pendulum {
+  transform-box: view-box;
+  transform-origin: 90px 112px;
+  animation: pendulum-swing 2.8s ease-in-out infinite;
+}
+
+@keyframes pendulum-swing {
+  0%, 100% {
+    transform: rotate(-9deg);
+  }
+
+  50% {
+    transform: rotate(9deg);
+  }
+}
+
+/* =================================
+   PENDULUM CLOCK MOVEMENT
+================================= */
+
+.clock-pendulum {
+  transform-box: view-box;
+  transform-origin: 90px 112px;
+  animation: pendulum-swing 2.8s ease-in-out infinite;
+}
+
+@keyframes pendulum-swing {
+  0%, 100% {
+    transform: rotate(-9deg);
+  }
+
+  50% {
+    transform: rotate(9deg);
+  }
+}
+
+
+/* =================================
+   STAR COLLECTION SHOWCASE
+================================= */
+
+.star-collection-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.star-sample {
+  flex-shrink: 0;
+}
+
+.star-sample-large {
+  width: 61px;
+  height: 61px;
+  transform: rotate(-9deg);
+}
+
+.star-sample-medium {
+  width: 45px;
+  height: 45px;
+  transform: rotate(12deg);
+}
+
+.star-sample-outline {
+  width: 52px;
+  height: 52px;
+  transform: rotate(-14deg);
+}
+
+.star-sample-small {
+  width: 27px;
+  height: 27px;
+  transform: rotate(8deg);
+}
