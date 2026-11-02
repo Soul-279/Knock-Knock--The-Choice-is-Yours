@@ -873,7 +873,9 @@
 }
 
 @keyframes pendulum-swing {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(-9deg);
   }
 
@@ -893,7 +895,9 @@
 }
 
 @keyframes pendulum-swing {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(-9deg);
   }
 
@@ -940,4 +944,26 @@
   width: 27px;
   height: 27px;
   transform: rotate(8deg);
+}
+
+/* Prevent showcase stars from inheriting gallery SVG sizing */
+
+.doodle-gallery-art.star-collection-art .star-sample-large {
+  width: 61px;
+  height: 61px;
+}
+
+.doodle-gallery-art.star-collection-art .star-sample-medium {
+  width: 45px;
+  height: 45px;
+}
+
+.doodle-gallery-art.star-collection-art .star-sample-outline {
+  width: 52px;
+  height: 52px;
+}
+
+.doodle-gallery-art.star-collection-art .star-sample-small {
+  width: 27px;
+  height: 27px;
 }

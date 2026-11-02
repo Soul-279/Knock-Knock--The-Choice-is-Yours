@@ -137,6 +137,29 @@ a:focus-visible {
   --die-top-fill: #293F59;
   --die-left-fill: #14263D;
   --die-right-fill: #1D3049;
+
+  /* Atmospheric illustration palette */
+
+  --stair-top-fill: #435F77;
+  --stair-front-fill: #2B425D;
+  --stair-side-fill: #1B2E45;
+
+  --stair-cloud-fill: #253B54;
+  --stair-cloud-shadow: #14263C;
+  --stair-cloud-highlight: #9CC8D0;
+
+  --eye-shell-fill: rgba(80, 25, 43, 0.38);
+  --eye-iris-fill: #9C2C4A;
+  --eye-iris-inner-fill: #511C36;
+  --eye-crimson: #F06B82;
+  --eye-red-border: #D76B7A;
+
+  --shooting-teal: #55D8CB;
+  --shooting-lime: #E6FF67;
+
+  --polaris-color: #C8F0F6;
+  --polaris-outline: #83C5D5;
+  --polaris-glow: rgba(140, 205, 225, 0.24);
 }
 
 
@@ -211,6 +234,29 @@ a:focus-visible {
   --die-top-fill: #F5E4DA;
   --die-left-fill: #E3D2CD;
   --die-right-fill: #EBDCD5;
+
+  /* Atmospheric illustration palette */
+
+  --stair-top-fill: #E8D9CC;
+  --stair-front-fill: #D4BDB4;
+  --stair-side-fill: #BDA5AA;
+
+  --stair-cloud-fill: #FFF7F0;
+  --stair-cloud-shadow: #E3D5D8;
+  --stair-cloud-highlight: #719DAD;
+
+  --eye-shell-fill: rgba(185, 65, 85, 0.10);
+  --eye-iris-fill: #B33C55;
+  --eye-iris-inner-fill: #F0B5B3;
+  --eye-crimson: #D65A6A;
+  --eye-red-border: #A83C52;
+
+  --shooting-teal: #398F88;
+  --shooting-lime: #B5D34C;
+
+  --polaris-color: #8DB7C7;
+  --polaris-outline: #719DAD;
+  --polaris-glow: rgba(113, 157, 173, 0.22);
 
   color: var(--text);
 }
@@ -374,7 +420,7 @@ a:focus-visible {
 }
 
 .koi-pupil {
-  fill: var(--text);
+  fill: #101018;
 }
 
 .koi-scale {
@@ -539,4 +585,179 @@ a:focus-visible {
 .twinkle-stroke {
   fill: none;
   stroke: var(--doodle-warm);
+}
+
+/* =================================
+   IMPOSSIBLE STAIRCASE
+================================= */
+
+.stair-top {
+  fill: var(--stair-top-fill);
+  stroke: var(--doodle-primary);
+}
+
+.stair-front {
+  fill: var(--stair-front-fill);
+  stroke: var(--doodle-primary);
+}
+
+.stair-side {
+  fill: var(--stair-side-fill);
+  stroke: var(--doodle-primary);
+}
+
+.stair-cloud-body {
+  fill: var(--stair-cloud-fill);
+  stroke: var(--doodle-primary);
+}
+
+.stair-cloud-shadow {
+  fill: var(--stair-cloud-shadow);
+  opacity: 0.85;
+}
+
+.stair-cloud-highlight {
+  fill: none;
+  stroke: var(--stair-cloud-highlight);
+}
+
+
+/* =================================
+   CURIOUS EYE
+================================= */
+
+.eye-shell {
+  fill: var(--eye-shell-fill);
+  stroke: var(--eye-red-border);
+}
+
+.eye-boundary {
+  fill: none;
+  stroke: var(--eye-crimson);
+}
+
+.eye-iris {
+  fill: var(--eye-iris-fill);
+  stroke: var(--eye-red-border);
+}
+
+.eye-iris-inner {
+  fill: var(--eye-iris-inner-fill);
+  stroke: var(--eye-crimson);
+}
+
+.eye-swirl {
+  fill: none;
+  stroke: var(--eye-crimson);
+}
+
+.eye-swirl-secondary {
+  fill: none;
+  stroke: var(--eye-red-border);
+}
+
+.eye-pupil {
+  fill: #101018;
+}
+
+.eye-pupil-highlight {
+  fill: #F5DDE4;
+}
+
+.eye-decoration {
+  fill: none;
+  stroke: var(--eye-crimson);
+}
+
+.eye-star {
+  fill: var(--eye-crimson);
+}
+
+
+/* =================================
+   SHOOTING STAR
+================================= */
+
+.shooting-trail {
+  fill: none;
+  stroke: var(--shooting-teal);
+  opacity: 0.7;
+}
+
+.shooting-trail-secondary {
+  fill: none;
+  stroke: var(--shooting-lime);
+  opacity: 0.9;
+}
+
+.shooting-trail-highlight {
+  fill: none;
+  stroke: var(--shooting-teal);
+}
+
+.shooting-star-body {
+  fill: var(--shooting-lime);
+  stroke: var(--shooting-teal);
+}
+
+.shooting-star-detail {
+  fill: none;
+  stroke: #FFFFFF;
+}
+
+.shooting-star-outline {
+  fill: none;
+  stroke: var(--shooting-teal);
+}
+
+.shooting-star-dot {
+  fill: var(--shooting-lime);
+}
+
+
+/* =================================
+   CONSTELLATION
+================================= */
+
+.constellation-lines,
+.constellation-secondary-lines {
+  fill: none;
+  stroke: var(--doodle-primary);
+}
+
+.constellation-star {
+  fill: var(--doodle-warm);
+  stroke: var(--doodle-primary);
+  stroke-width: 1.2;
+}
+
+.constellation-star-secondary {
+  fill: var(--doodle-secondary);
+}
+
+/* =================================
+   POLARIS — THE NORTH STAR
+================================= */
+
+.polaris-glow {
+  fill: var(--polaris-glow);
+  opacity: 1;
+  filter: drop-shadow(0 0 8px var(--polaris-color));
+}
+
+.polaris-star {
+  fill: var(--polaris-color);
+  stroke: var(--polaris-outline);
+}
+
+.polaris-core {
+  fill: #FFFFFF;
+}
+
+/* =================================
+   CURIOUS MARKS
+================================= */
+
+.curious-marks {
+  overflow: visible;
 }

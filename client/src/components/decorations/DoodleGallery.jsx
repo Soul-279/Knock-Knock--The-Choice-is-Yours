@@ -16,7 +16,13 @@ import {
   StarOutline,
   TinyTwinkle
 } from "../doodles/decorative";
-
+import {
+  ImpossibleStaircase,
+  CuriousEye,
+  ShootingStar,
+  Constellation,
+  CuriousMarks
+} from "../doodles/atmosphere";
 
 function DoodleGallery() {
   return (
@@ -208,6 +214,80 @@ function DoodleGallery() {
             No two stars need to look alike.
           </span>
 
+        </article>
+
+        {/* Impossible Staircase */}
+
+        <article className="doodle-gallery-card">
+          <div className="doodle-gallery-art">
+            <ImpossibleStaircase />
+          </div>
+
+          <h3>Somewhere above the clouds</h3>
+
+          <span>
+            The destination is questionable.
+          </span>
+        </article>
+
+
+        {/* Curious Eye */}
+
+        <article className="doodle-gallery-card">
+          <div className="doodle-gallery-art">
+            <CuriousEye />
+          </div>
+
+          <h3>The universe is watching</h3>
+
+          <span>
+            Some mysteries look back.
+          </span>
+        </article>
+
+
+        {/* Shooting Star */}
+
+        <article className="doodle-gallery-card">
+          <div className="doodle-gallery-art">
+            <ShootingStar />
+          </div>
+
+          <h3>Make a little wish</h3>
+
+          <span>
+            You have until it disappears.
+          </span>
+        </article>
+
+
+        {/* Constellation */}
+
+        <article className="doodle-gallery-card">
+          <div className="doodle-gallery-art">
+            <Constellation />
+          </div>
+
+          <h3>Finding the North Star</h3>
+
+          <span>
+            Somewhere between the stars.
+          </span>
+        </article>
+
+
+        {/* Curious Marks */}
+
+        <article className="doodle-gallery-card">
+          <div className="doodle-gallery-art">
+            <CuriousMarks />
+          </div>
+
+          <h3>What if...?</h3>
+
+          <span>
+            The beginning of every question.
+          </span>
         </article>
 
       </div>
