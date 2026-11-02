@@ -3,8 +3,6 @@ import "./App.css";
 import PollCard from "./components/PollCard";
 import HeroDecorations from "./components/decorations/HeroDecorations";
 import SectionDecorations from "./components/decorations/SectionDecorations";
-import DoodleGallery from "./components/decorations/DoodleGallery";
-
 const demoPolls = [
   {
     id: 1,
@@ -71,9 +69,7 @@ function App() {
           className="theme-toggle"
           type="button"
           onClick={toggleTheme}
-          aria-label={`Switch to ${theme === "twilight" ? "dawn" : "twilight"} theme`}
-          aria-pressed={theme === "dawn"}
-        >
+          aria-label={`Switch to ${theme === "twilight" ? "dawn" : "twilight"} theme`}        >
           <span aria-hidden="true">
             {theme === "twilight" ? "☼" : "☾"}
           </span>
@@ -131,7 +127,7 @@ function App() {
           <div className="hero-decoration">
 
             <div className="decoration-label">
-              THE DAILY DILEMMA / 001
+              ENTRY NO. 001 — A QUESTION AWAITS
             </div>
 
             <div className="door-container">
@@ -167,14 +163,14 @@ function App() {
 
             <div>
               <p className="eyebrow">
-                THE COMMUNITY IS DECIDING
+                CURIOSITIES FROM THE ARCHIVE
               </p>
 
               <h2>Pick your side.</h2>
             </div>
 
             <span className="section-note">
-              EXPLORE THE POSSIBILITIES ↘
+              A little preview of the archive — voting opens later.
             </span>
 
           </div>
@@ -216,8 +212,6 @@ function App() {
           </button>
 
         </section>
-
-        <DoodleGallery />
 
       </main>
 

@@ -7,30 +7,36 @@ function PollCard({ poll }) {
           {poll.category}
         </span>
 
-        <span className="poll-status">
-          PREVIEW
+        <span className="poll-card-star" aria-hidden="true">
+          ✧
         </span>
       </div>
 
       <h3>{poll.question}</h3>
 
+      <div className="poll-card-divider" aria-hidden="true">
+        <span>✧</span>
+      </div>
+
       <div className="poll-options">
         {poll.options.map((option, index) => (
-          <div className="poll-option" key={option}>
+          <div
+            className="poll-option"
+            key={`${index}-${option}`}
+          >
             <span className="option-number">
               0{index + 1}
             </span>
 
-            <span>{option}</span>
+            <span className="option-text">
+              {option}
+            </span>
 
-            <span className="option-arrow">↗</span>
+            <span className="option-arrow" aria-hidden="true">
+              ↗
+            </span>
           </div>
         ))}
-      </div>
-
-      <div className="poll-card-footer">
-        <span>{poll.votes} votes</span>
-        <span>VOTING COMING SOON</span>
       </div>
 
     </article>
